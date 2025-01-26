@@ -1,0 +1,45 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-drag: none;
+  -moz-user-drag: none;
+  -ms-user-drag: none;
+}
+
+body {
+  background: linear-gradient(135deg, #1a0b2e 0%, #2d1b69 100%);
+  min-height: 100vh;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.timeline-line {
+  width: 2px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.roadmap-item {
+  transform: translateY(0);
+  transition: all 0.3s ease;
+}
+
+.roadmap-item:hover {
+  transform: translateY(-8px);
+}
+
+.roadmap-item:hover .glass-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
